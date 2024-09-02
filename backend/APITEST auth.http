@@ -1,0 +1,27 @@
+### Signup
+POST http://localhost:5000/signup
+Content-Type: application/json
+
+{
+    "name": "naufal",
+    "email": "naufal@gmail.com",
+    "password": "naufal",
+    "confPassword": "naufal"
+}
+
+### Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "johndoe@example.com",
+    "password": "password123"
+}
+
+### Get Current User
+GET http://localhost:5000/me
+Authorization: Bearer <JWT_TOKEN>
+
+### Logout
+DELETE http://localhost:5000/logout
+Authorization: Bearer <JWT_TOKEN>

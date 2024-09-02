@@ -12,7 +12,7 @@ const router = express.Router();
 
 router.get('/users', verifyUser, adminOnly, getUsers);
 router.get('/users/:id', verifyUser, adminOnly, getUserById);
-router.post('/users', createUser);
+router.post('/users', verifyUser, adminOnly, createUser); // Hanya admin yang bisa membuat user
 router.patch('/users/:id', verifyUser, adminOnly, updateUser);
 router.delete('/users/:id', verifyUser, adminOnly, deleteUser);
 
