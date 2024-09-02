@@ -1,0 +1,112 @@
+.staff-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+ul.list-disc {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.list-disc li {
+    margin-bottom: 10px;
+}
+
+/* Menampilkan modal ketika tidak tersembunyi */
+#editStaffModal.hidden {
+    display: none;
+}
+
+#editStaffModal.show {
+    display: flex;
+}
+
+/* CSS untuk modal yang lebih profesional */
+#editStaffModal.show {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-10px); }
+    to { transform: translateY(0); }
+}
+
+.modal-header {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.modal-header button {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding-bottom: 20px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-footer button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.modal-footer button.cancel-btn {
+    background-color: #9ca3af;
+    color: white;
+}
+
+.modal-footer button.submit-btn {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.modal-footer button.cancel-btn:hover {
+    background-color: #6b7280;
+}
+
+.modal-footer button.submit-btn:hover {
+    background-color: #2563eb;
+}

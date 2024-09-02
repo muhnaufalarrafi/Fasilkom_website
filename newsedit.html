@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Berita - Fakultas Ilmu Komputer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header>
+        <div id="header"></div> <!-- Placeholder for header -->
+    </header>
+    
+    <section class="container mx-auto p-8 bg-white rounded-lg shadow-lg mt-8">
+        <!-- Back Button -->
+        <a href="newsadmin.html" class="flex items-center mb-4 text-blue-600 hover:underline">
+            <img src="https://img.icons8.com/ios-filled/50/000000/left.png" alt="Kembali" class="w-4 h-4 mr-2"/> Kembali
+        </a>
+
+        <h2 class="text-3xl font-bold mb-4 text-blue-900 text-center">Edit Berita</h2>
+        <p class="text-center text-red-500 mb-8">Perbarui detail berita yang ada di fakultas</p>
+
+        <!-- Form Edit Berita -->
+        <div>
+            <form id="edit-news-form" class="bg-gray-200 p-4 rounded-lg">
+                <div class="mb-4">
+                    <label for="newsTitle" class="block text-sm font-medium text-gray-700">Judul Berita</label>
+                    <input type="text" id="newsTitle" name="newsTitle" value="Peluncuran Lab Baru" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="newsContent" class="block text-sm font-medium text-gray-700">Isi Berita</label>
+                    <textarea id="newsContent" name="newsContent" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">Fakultas Ilmu Komputer meluncurkan laboratorium baru untuk mendukung penelitian AI.</textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="newsImage" class="block text-sm font-medium text-gray-700">Gambar Berita</label>
+                    <input type="file" id="newsImage" name="newsImage" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-700">Perbarui Berita</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Placeholder for footer -->
+        <div id="footer"></div>
+    </footer>
+
+    <!-- Load Header and Footer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('headeradmin.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+    
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+
+        // JavaScript untuk mengirim data yang diperbarui ke backend dapat ditambahkan di sini
+    </script>
+
+    <!-- Optional Bootstrap JS dan dependensinya -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

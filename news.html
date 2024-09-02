@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasilkom News - Fakultas Ilmu Komputer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div id="header"></div> <!-- Placeholder for header -->
+    </header>
+    
+    <main class="container mt-5">
+        <h2 class="text-center">Fasilkom News</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card news-card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Berita 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Peluncuran Lab Baru</h5>
+                        <p class="card-text">Fakultas Ilmu Komputer meluncurkan laboratorium baru untuk mendukung penelitian AI.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card news-card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Berita 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Mahasiswa Meraih Penghargaan</h5>
+                        <p class="card-text">Mahasiswa Fasilkom meraih penghargaan di kompetisi internasional bidang cybersecurity.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card news-card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Berita 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Kunjungan Industri ke Google</h5>
+                        <p class="card-text">Mahasiswa dan dosen Fasilkom melakukan kunjungan industri ke kantor Google Indonesia.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- Placeholder for footer -->
+        <div id="footer"></div>
+    </footer>
+
+    <!-- Load Header and Footer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+    
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+
+    <!-- Optional Bootstrap JS dan dependensinya -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

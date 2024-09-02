@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Detail Diskusi - Fakultas Ilmu Komputer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="discussion-detail.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header>
+        <div id="header"></div> <!-- Placeholder for header -->
+    </header>
+
+    <section class="container mx-auto p-8 bg-white rounded-lg shadow-lg mt-8">
+        <h2 class="text-3xl font-bold mb-4 text-blue-900 text-center">Detail Diskusi</h2>
+        <p class="text-center text-red-500 mb-8">Edit atau Hapus Diskusi serta Kelola Komentar</p>
+
+        <!-- Form Edit Diskusi -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">Edit Diskusi</h3>
+            <form id="edit-discussion-form" class="bg-gray-200 p-4 rounded-lg">
+                <div class="mb-4">
+                    <label for="discussionTitle" class="block text-sm font-medium text-gray-700">Judul Diskusi</label>
+                    <input type="text" id="discussionTitle" name="discussionTitle" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="Diskusi tentang Teknologi">
+                </div>
+                <div class="mb-4">
+                    <label for="discussionContent" class="block text-sm font-medium text-gray-700">Konten Diskusi</label>
+                    <textarea id="discussionContent" name="discussionContent" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">Ini adalah konten diskusi tentang teknologi.</textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="discussionImage" class="block text-sm font-medium text-gray-700">Gambar Diskusi (Optional)</label>
+                    <input type="file" id="discussionImage" name="discussionImage" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-700">Perbarui Diskusi</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Daftar Komentar -->
+        <div class="comments-section mt-8">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">Komentar Diskusi</h3>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <!-- Comment Form for Admin -->
+                <form id="admin-comment-form" class="mb-4">
+                    <textarea id="adminComment" name="adminComment" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Tambahkan komentar sebagai admin"></textarea>
+                    <div class="flex justify-end mt-2">
+                        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-green-700">Kirim Komentar</button>
+                    </div>
+                </form>
+                <!-- Existing Comments -->
+                <div id="comments-list">
+                    <div class="comment mb-4">
+                        <div class="comment-header flex justify-between items-center">
+                            <h4 class="text-lg font-semibold">User 1</h4>
+                            <button class="text-red-600 hover:underline">Hapus</button>
+                        </div>
+                        <p class="text-gray-600 mt-2">Komentar yang sangat bermanfaat!</p>
+                    </div>
+                    <!-- More comments here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('headeradmin.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+    
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+</body>
+</html>

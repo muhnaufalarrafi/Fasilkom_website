@@ -1,0 +1,14 @@
+#searchIcon img {
+    width: 40px; /* Ukuran sedang */
+    height: 40px;
+    cursor: pointer;
+}
+
+#searchInput.show {
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+#searchInput.hidden {
+    display: none;
+}

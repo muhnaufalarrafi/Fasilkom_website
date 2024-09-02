@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Kelola Diskusi - Fakultas Ilmu Komputer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="discussion.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header>
+        <div id="header"></div> <!-- Placeholder for header -->
+    </header>
+
+    <section class="container mx-auto p-8 bg-white rounded-lg shadow-lg mt-8">
+        <h2 class="text-3xl font-bold mb-4 text-blue-900 text-center">Kelola Diskusi</h2>
+        <p class="text-center text-red-500 mb-8">Tambah, Ubah, atau Hapus Diskusi Fakultas</p>
+
+        <!-- Icon for Toggling Add Discussion Form -->
+        <div class="flex justify-center items-center mb-4">
+            <button id="toggleAddDiscussionForm" class="flex justify-center items-center">
+                <img src="https://img.icons8.com/ios-filled/50/000000/plus.png" alt="Add Discussion Icon" class="h-10 w-10">
+            </button>
+        </div>
+
+        <!-- Form Tambah Diskusi -->
+        <div id="addDiscussionForm" class="hidden mb-8">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">Tambah Diskusi Baru</h3>
+            <form id="create-discussion-form" class="bg-gray-200 p-4 rounded-lg">
+                <div class="mb-4">
+                    <label for="discussionTitle" class="block text-sm font-medium text-gray-700">Judul Diskusi</label>
+                    <input type="text" id="discussionTitle" name="discussionTitle" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="discussionContent" class="block text-sm font-medium text-gray-700">Konten Diskusi</label>
+                    <textarea id="discussionContent" name="discussionContent" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="discussionImage" class="block text-sm font-medium text-gray-700">Gambar Diskusi (Optional)</label>
+                    <input type="file" id="discussionImage" name="discussionImage" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-700">Tambah Diskusi</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Daftar Diskusi -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">Daftar Diskusi</h3>
+            <div id="discussion-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Contoh Diskusi -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-4">
+                        <div class="discussion-card bg-gray-100 p-4 rounded-lg">
+                            <h3 class="text-xl font-semibold text-blue-900">Diskusi tentang Teknologi</h3>
+                            <p class="text-sm text-gray-500">Dibuat pada: 01 September 2024</p>
+                            <div class="flex justify-between mt-4">
+                                <a href="discussiondetails.html?id=1" class="text-blue-600 hover:underline">Details</a>
+                                <button class="text-red-600 hover:underline">Hapus</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tambahkan lebih banyak diskusi sesuai kebutuhan -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+    <!-- Load Header and Footer -->
+    <script>
+        document.getElementById('toggleAddDiscussionForm').addEventListener('click', function() {
+            const addDiscussionForm = document.getElementById('addDiscussionForm');
+            if (addDiscussionForm.classList.contains('hidden')) {
+                addDiscussionForm.classList.remove('hidden');
+                addDiscussionForm.classList.add('show');
+            } else {
+                addDiscussionForm.classList.add('hidden');
+                addDiscussionForm.classList.remove('show');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('headeradmin.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+    
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+</body>
+</html>

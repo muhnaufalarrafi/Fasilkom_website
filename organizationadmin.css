@@ -1,0 +1,37 @@
+ul.list-disc {
+    list-style-type: none; /* Menghilangkan bintik hitam pada elemen list */
+    padding-left: 0; /* Menghapus padding kiri */
+}
+
+ul.list-disc li {
+    margin-bottom: 10px; /* Menambahkan jarak antara list item */
+}
+
+.staff-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Menambahkan jarak antara gambar */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+}
+
+.card img {
+    flex-shrink: 0;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.card-content {
+    flex-grow: 1;
+}

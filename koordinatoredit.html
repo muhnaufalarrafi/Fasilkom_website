@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Koordinator Departemen - Fakultas Ilmu Komputer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="koordinatoredit.css"> <!-- Pastikan CSS ini memang diperlukan -->
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header>
+        <div id="header"></div> <!-- Placeholder for header -->
+    </header>
+
+    <section class="container mx-auto p-8 bg-white rounded-lg shadow-lg mt-8">
+            <!-- Ikon Kembali -->
+    <a href="organizationadmin.html" class="text-blue-600 hover:underline flex items-center mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Kembali
+    </a>
+
+        <h2 class="text-3xl font-bold mb-4 text-blue-900 text-center">Edit Koordinator Departemen</h2>
+
+        <!-- Form Edit Koordinator -->
+        <form id="edit-coordinator-form" class="bg-gray-200 p-4 rounded-lg mb-8">
+            <div class="mb-4">
+                <label for="coordinatorName" class="block text-sm font-medium text-gray-700">Nama Koordinator</label>
+                <input type="text" id="coordinatorName" name="coordinatorName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+            </div>
+            <div class="mb-4">
+                <label for="departmentName" class="block text-sm font-medium text-gray-700">Nama Departemen</label>
+                <input type="text" id="departmentName" name="departmentName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+            </div>
+            <div class="mb-4">
+                <label for="coordinatorImage" class="block text-sm font-medium text-gray-700">Upload Gambar Koordinator</label>
+                <input type="file" id="coordinatorImage" name="coordinatorImage" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+            </div>
+            <div class="flex justify-end">
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-700">Perbarui Koordinator</button>
+            </div>
+        </form>
+
+        <!-- Bagian Tambah Staff -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">Staff</h3>
+
+            <!-- Form Tambah Staff -->
+            <form id="add-staff-form" class="bg-gray-200 p-4 rounded-lg mb-8">
+                <div class="mb-4">
+                    <label for="staffName" class="block text-sm font-medium text-gray-700">Nama Staff</label>
+                    <input type="text" id="staffName" name="staffName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="staffImage" class="block text-sm font-medium text-gray-700">Upload Gambar Staff</label>
+                    <input type="file" id="staffImage" name="staffImage" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-green-700">Tambah Staff</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Daftar Staff -->
+        <div id="staff-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Contoh staff yang ditampilkan -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex items-center p-4">
+                <img src="https://via.placeholder.com/50" class="staff-image" alt="Staff Image">
+                <div>
+                    <h5 class="text-lg font-semibold text-blue-900">Nama Staff</h5>
+                    <p class="text-gray-600">Jabatan Staff</p>
+                    <div class="flex justify-between mt-4">
+                        <a href="#" class="text-blue-600 hover:underline edit-staff-btn">Edit</a>
+                        <button class="text-red-600 hover:underline">Hapus</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Ulangi struktur ini untuk staff lainnya -->
+        </div>
+
+        <!-- Modal Popup for Editing Staff -->
+<div id="editStaffModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+        <h3 class="text-2xl font-bold text-blue-900 mb-4">Edit Staff</h3>
+        <form id="edit-staff-form">
+            <div class="mb-4">
+                <label for="editStaffName" class="block text-sm font-medium text-gray-700">Nama Staff</label>
+                <input type="text" id="editStaffName" name="editStaffName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div class="mb-4">
+                <label for="editStaffImage" class="block text-sm font-medium text-gray-700">Upload Gambar Staff</label>
+                <input type="file" id="editStaffImage" name="editStaffImage" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div class="flex justify-end gap-2">
+                <button type="button" id="cancelEditStaff" class="bg-gray-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-gray-600">Batal</button>
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-700">Perbarui Staff</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    </section>
+
+    <footer>
+        <div id="footer"></div> <!-- Placeholder for footer -->
+    </footer>
+
+    <script src="koordinatoredit.js"></script> <!-- Pastikan file ini sudah terhubung dengan benar -->
+</body>
+</html>

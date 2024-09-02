@@ -1,0 +1,130 @@
+<!-- discussion.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Diskusi - Fakultas Ilmu Komputer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header>
+        <div id="header"></div>
+    </header>
+
+    <section class="container mx-auto p-8 bg-white rounded-lg shadow-lg mt-8">
+        <h2 class="text-3xl font-bold mb-4 text-blue-900 text-center">Ruang Diskusi</h2>
+        <p class="text-center text-gray-700 mb-8">Berdiskusi dengan mahasiswa dan dosen mengenai topik-topik terkini</p>
+
+        <!-- Tabs for General Topics and My Topics -->
+        <div class="flex justify-center mb-8">
+            <button id="generalTopicsTab" class="px-4 py-2 mr-2 bg-blue-600 text-white rounded-md focus:outline-none">Topik Umum</button>
+            <button id="myTopicsTab" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md focus:outline-none">Topik Saya</button>
+        </div>
+
+        <!-- Button for Creating New Topic -->
+        <div class="flex justify-center mb-8">
+            <button id="createTopicButton" class="bg-blue-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-700">Buat Topik Baru</button>
+        </div>
+
+        <!-- Form for Creating New Topic (Initially Hidden) -->
+        <div id="createTopicForm" class="hidden bg-gray-200 p-6 rounded-lg mb-8">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">Buat Topik Baru</h3>
+            <form id="new-topic-form">
+                <div class="mb-4">
+                    <label for="newTopicTitle" class="block text-sm font-medium text-gray-700">Judul Topik</label>
+                    <input type="text" id="newTopicTitle" name="newTopicTitle" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="newTopicDescription" class="block text-sm font-medium text-gray-700">Deskripsi Topik</label>
+                    <textarea id="newTopicDescription" name="newTopicDescription" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-700">Kirim</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Discussion Lists -->
+        <div id="discussion-lists">
+            <!-- General Topics (Initially Visible) -->
+            <div id="generalTopics" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="discussion-detail.html" class="bg-white shadow-lg rounded-lg p-6 hover:bg-gray-100">
+                    <h3 class="text-xl font-bold text-blue-600">Diskusi tentang Teknologi AI</h3>
+                    <p class="text-gray-700 mb-2">Membahas tren terbaru dalam pengembangan teknologi kecerdasan buatan.</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>15 balasan</span>
+                        <span>3 hari yang lalu</span>
+                    </div>
+                </a>
+                <!-- Other General Topics... -->
+            </div>
+
+            <!-- My Topics (Initially Hidden) -->
+            <div id="myTopics" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="discussion-detail.html" class="bg-white shadow-lg rounded-lg p-6 hover:bg-gray-100">
+                    <h3 class="text-xl font-bold text-blue-600">Diskusi tentang Pengembangan Web</h3>
+                    <p class="text-gray-700 mb-2">Membahas tips dan trik dalam pengembangan web modern.</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>10 balasan</span>
+                        <span>5 hari yang lalu</span>
+                    </div>
+                </a>
+                <!-- Other My Topics... -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+    <!-- JavaScript for Tab Switching and Create Topic Form -->
+    <script>
+        document.getElementById('generalTopicsTab').addEventListener('click', function() {
+            document.getElementById('generalTopics').classList.remove('hidden');
+            document.getElementById('myTopics').classList.add('hidden');
+            document.getElementById('generalTopicsTab').classList.add('bg-blue-600', 'text-white');
+            document.getElementById('generalTopicsTab').classList.remove('bg-gray-200', 'text-gray-700');
+            document.getElementById('myTopicsTab').classList.add('bg-gray-200', 'text-gray-700');
+            document.getElementById('myTopicsTab').classList.remove('bg-blue-600', 'text-white');
+        });
+
+        document.getElementById('myTopicsTab').addEventListener('click', function() {
+            document.getElementById('generalTopics').classList.add('hidden');
+            document.getElementById('myTopics').classList.remove('hidden');
+            document.getElementById('myTopicsTab').classList.add('bg-blue-600', 'text-white');
+            document.getElementById('myTopicsTab').classList.remove('bg-gray-200', 'text-gray-700');
+            document.getElementById('generalTopicsTab').classList.add('bg-gray-200', 'text-gray-700');
+            document.getElementById('generalTopicsTab').classList.remove('bg-blue-600', 'text-white');
+        });
+
+        document.getElementById('createTopicButton').addEventListener('click', function() {
+            const form = document.getElementById('createTopicForm');
+            form.classList.toggle('hidden');
+        });
+
+        document.getElementById('new-topic-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Topik baru telah dikirim!');
+            // Add functionality to create a new topic (AJAX or form submission logic)
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('headeradmin.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+</body>
+</html>

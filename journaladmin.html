@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Kelola Jurnal - Fakultas Ilmu Komputer</title>
+    <!-- Tambahkan Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header>
+        <div id="header"></div> <!-- Placeholder for header -->
+    </header>
+
+    <!-- Section Admin Jurnal -->
+    <section class="container mx-auto p-8 bg-white rounded-lg shadow-lg mt-8">
+        <h2 class="text-3xl font-bold mb-4 text-blue-900 text-center">Kelola Jurnal</h2>
+        <p class="text-center text-red-500 mb-8">Tambah, Ubah, atau Hapus Jurnal Fakultas</p>
+
+        <!-- Icon for Toggling Add Journal Form -->
+        <div class="flex justify-center items-center mb-4">
+            <button id="toggleAddJournalForm" class="flex justify-center items-center">
+                <img src="https://img.icons8.com/ios-filled/50/000000/plus.png" alt="Add Journal Icon" class="h-10 w-10">
+            </button>
+        </div>
+
+        <!-- Form Tambah Jurnal -->
+        <div id="addJournalForm" class="hidden mb-8">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">Tambah Jurnal Baru</h3>
+            <form id="create-journal-form" class="bg-gray-200 p-4 rounded-lg">
+                <div class="mb-4">
+                    <label for="title" class="block text-sm font-medium text-gray-700">Judul Jurnal</label>
+                    <input type="text" id="title" name="title" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="authors" class="block text-sm font-medium text-gray-700">Penulis</label>
+                    <input type="text" id="authors" name="authors" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="abstract" class="block text-sm font-medium text-gray-700">Abstrak</label>
+                    <textarea id="abstract" name="abstract" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="uploadDate" class="block text-sm font-medium text-gray-700">Tanggal Upload</label>
+                    <input type="date" id="uploadDate" name="uploadDate" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="downloadLink" class="block text-sm font-medium text-gray-700">Link Download</label>
+                    <input type="url" id="downloadLink" name="downloadLink" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-700">Tambah Jurnal</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Daftar Jurnal -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">Daftar Jurnal</h3>
+            <div id="journal-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Contoh Jurnal (Dihapus Nanti) -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-blue-900">Journal of Computer Science</h3>
+                        <p class="text-sm text-gray-500 mt-2">Penulis: John Doe</p>
+                        <p class="text-sm text-gray-500 mt-1">Tanggal: 2024-08-08</p>
+                        <div class="flex justify-between mt-4">
+                            <a href="journaledit.html" class="text-blue-600 hover:underline">Edit</a>
+                            <button class="text-red-600 hover:underline">Hapus</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Journal Cards Akan Ditambahkan Dinamis melalui JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Placeholder for footer -->
+        <div id="footer"></div>
+    </footer>
+
+    <!-- Load Header and Footer -->
+    <script>
+        document.getElementById('toggleAddJournalForm').addEventListener('click', function() {
+            const addJournalForm = document.getElementById('addJournalForm');
+            if (addJournalForm.classList.contains('hidden')) {
+                addJournalForm.classList.remove('hidden');
+                addJournalForm.classList.add('show');
+            } else {
+                addJournalForm.classList.add('hidden');
+                addJournalForm.classList.remove('show');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('headeradmin.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+    
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+
+        // JavaScript untuk CRUD operations akan ditambahkan di sini
+    </script>
+
+    <!-- Optional Bootstrap JS dan dependensinya -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

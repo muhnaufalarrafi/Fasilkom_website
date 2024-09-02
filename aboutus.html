@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BEM Fakultas Ilmu Komputer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    <style>
+        /* Custom Font */
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #3b82f6; /* Biru cerah */
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .bg-blue-50 {
+            background-color: #ebf8ff;
+        }
+
+        i.fas {
+            font-size: 1.5rem;
+        }
+
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .swiper-slide img {
+            padding: 0; /* Hilangkan padding */
+            margin: 0;  /* Hilangkan margin */
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #ffffff; /* Warna tombol */
+            position: absolute;
+            top: 50%; /* Vertikal tengah */
+            transform: translateY(-50%);
+            z-index: 10; /* Di atas elemen lain */
+        }
+
+        .swiper-button-next {
+            right: 10px; /* Di pojok kanan galeri */
+        }
+
+        .swiper-button-prev {
+            left: 10px; /* Di pojok kiri galeri */
+        }
+
+        .swiper-container {
+            position: relative;
+            overflow: hidden; /* Untuk memastikan navigasi dan pagination tetap di dalam galeri */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navbar -->
+    <header>
+        <div id="header"></div> <!-- Placeholder for header -->
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="container mx-auto p-8 mt-8 bg-white rounded-lg shadow-lg border-l-4 border-blue-500">
+        <h2 class="text-4xl font-bold mb-6">Tentang Kami</h2>
+        <p class="text-lg leading-relaxed text-gray-700">
+            Badan Eksekutif Mahasiswa (BEM) Fakultas Ilmu Komputer adalah organisasi mahasiswa yang berperan sebagai
+            perwakilan dan fasilitator kegiatan mahasiswa di fakultas. Kami bertujuan untuk menciptakan lingkungan akademis
+            yang dinamis serta mendukung pengembangan minat dan bakat mahasiswa melalui berbagai program kerja.
+        </p>
+    </section>
+
+    <!-- Visi dan Misi Section -->
+    <section class="container mx-auto p-8 mt-12 bg-white rounded-lg shadow-lg">
+        <h2 class="text-4xl font-bold mb-6">Visi dan Misi</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4">
+                    <i class="fas fa-bullseye text-blue-500 mr-2"></i>Visi
+                </h3>
+                <p class="text-lg text-gray-700">Mewujudkan mahasiswa Fakultas Ilmu Komputer yang kreatif, inovatif, dan
+                    berintegritas tinggi.</p>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4">
+                    <i class="fas fa-tasks text-blue-500 mr-2"></i>Misi
+                </h3>
+                <ul class="list-disc list-inside text-lg text-gray-700">
+                    <li>Mengembangkan potensi mahasiswa melalui berbagai kegiatan akademis dan non-akademis.</li>
+                    <li>Menjalin hubungan harmonis dengan civitas akademika.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Struktur Organisasi Section -->
+    <section class="container mx-auto p-8 mt-12 bg-white rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold mb-6">Struktur Organisasi</h2>
+        
+        <!-- Ketua and Wakil Ketua at the Top -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
+            <div class="bg-gray-200 p-6 rounded-lg text-center shadow-md">
+                <img class="w-32 h-32 rounded-full mx-auto mb-4" src="https://via.placeholder.com/150" alt="Ketua BEM">
+                <h3 class="font-bold text-xl">Nama Ketua BEM</h3>
+                <p class="text-sm text-gray-600">Ketua BEM</p>
+            </div>
+            <div class="bg-gray-200 p-6 rounded-lg text-center shadow-md">
+                <img class="w-32 h-32 rounded-full mx-auto mb-4" src="https://via.placeholder.com/150" alt="Wakil Ketua BEM">
+                <h3 class="font-bold text-xl">Nama Wakil Ketua BEM</h3>
+                <p class="text-sm text-gray-600">Wakil Ketua BEM</p>
+            </div>
+        </div>
+
+        <!-- Sekretaris 1, Sekretaris 2, Bendahara 1, Bendahara 2 in a Responsive Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="bg-gray-200 p-6 rounded-lg text-center shadow-md">
+                <img class="w-32 h-32 rounded-full mx-auto mb-4" src="https://via.placeholder.com/150" alt="Sekretaris 1">
+                <h3 class="font-bold text-xl">Nama Sekretaris 1</h3>
+                <p class="text-sm text-gray-600">Sekretaris 1</p>
+            </div>
+            <div class="bg-gray-200 p-6 rounded-lg text-center shadow-md">
+                <img class="w-32 h-32 rounded-full mx-auto mb-4" src="https://via.placeholder.com/150" alt="Sekretaris 2">
+                <h3 class="font-bold text-xl">Nama Sekretaris 2</h3>
+                <p class="text-sm text-gray-600">Sekretaris 2</p>
+            </div>
+            <div class="bg-gray-200 p-6 rounded-lg text-center shadow-md">
+                <img class="w-32 h-32 rounded-full mx-auto mb-4" src="https://via.placeholder.com/150" alt="Bendahara 1">
+                <h3 class="font-bold text-xl">Nama Bendahara 1</h3>
+                <p class="text-sm text-gray-600">Bendahara 1</p>
+            </div>
+            <div class="bg-gray-200 p-6 rounded-lg text-center shadow-md">
+                <img class="w-32 h-32 rounded-full mx-auto mb-4" src="https://via.placeholder.com/150" alt="Bendahara 2">
+                <h3 class="font-bold text-xl">Nama Bendahara 2</h3>
+                <p class="text-sm text-gray-600">Bendahara 2</p>
+            </div>
+        </div>
+
+        <!-- Button to see more -->
+        <div class="text-center mt-6">
+            <a href="organization.html" class="inline-block bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 transition">Lihat Selengkapnya</a>
+        </div>
+    </section>
+
+    <!-- Program Kerja Section -->
+    <section class="container mx-auto p-8 mt-12 bg-white rounded-lg shadow-lg">
+        <h2 class="text-4xl font-bold mb-6">Program Kerja</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-100 p-4 rounded-lg shadow">
+                <h4 class="text-xl font-semibold mb-2"><i class="fas fa-seminar text-blue-500 mr-2"></i>Seminar Teknologi Tahunan</h4>
+                <p class="text-gray-700">Seminar yang membahas perkembangan teknologi terkini di dunia IT.</p>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg shadow">
+                <h4 class="text-xl font-semibold mb-2"><i class="fas fa-code text-blue-500 mr-2"></i>Kompetisi Pemrograman Internal</h4>
+                <p class="text-gray-700">Kompetisi pemrograman yang menguji kemampuan mahasiswa dalam menyelesaikan masalah kompleks.</p>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg shadow">
+                <h4 class="text-xl font-semibold mb-2"><i class="fas fa-hands-helping text-blue-500 mr-2"></i>Pengabdian Masyarakat</h4>
+                <p class="text-gray-700">Kegiatan sosial untuk membantu masyarakat dengan keahlian yang dimiliki mahasiswa.</p>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg shadow">
+                <h4 class="text-xl font-semibold mb-2"><i class="fas fa-laptop-code text-blue-500 mr-2"></i>Workshop Pengembangan Aplikasi</h4>
+                <p class="text-gray-700">Pelatihan intensif mengenai pengembangan aplikasi modern.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Galeri Section -->
+    <section class="container mx-auto p-8 mt-12 bg-white rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold mb-6">Galeri Kegiatan</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <img class="rounded-lg shadow-md w-full h-auto" src="https://via.placeholder.com/400" alt="Event 1">
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <img class="rounded-lg shadow-md w-full h-auto" src="https://via.placeholder.com/400" alt="Event 2">
+                </div>
+                <!-- Additional slides as needed -->
+                 <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <img class="rounded-lg shadow-md w-full h-auto" src="https://via.placeholder.com/400" alt="Event 1">
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <img class="rounded-lg shadow-md w-full h-auto" src="https://via.placeholder.com/400" alt="Event 2">
+                </div>
+                <!-- Additional slides as needed -->
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    
+    <footer>
+        <!-- Placeholder for footer -->
+        <div id="footer"></div>
+    </footer>
+
+    <!-- Load Header and Footer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+    
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+
+    <!-- Optional Bootstrap JS dan dependensinya -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Swiper JS Inisialisasi -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3, // Tetap sama jika ukuran gambar cukup besar
+            spaceBetween: 5,  // Mengurangi jarak antar slide
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 5,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 5,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 5,
+                },
+            }
+        });
+    </script>
+
+</body>
+
+</html>

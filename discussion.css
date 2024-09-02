@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    padding: 10px 20px; /* Kurangi padding jika terlalu besar */
+    font-size: 1rem; /* Ukuran font yang proporsional */
+}
+
+.list-group-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.list-group-item h5 {
+    color: #007bff;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}

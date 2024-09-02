@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Kelola Struktur Organisasi - Fakultas Ilmu Komputer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="organizationadmin.css"> <!-- Include CSS file -->
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header>
+        <div id="header"></div> <!-- Placeholder for header -->
+    </header>
+
+    <section class="container mx-auto p-8 bg-white rounded-lg shadow-lg mt-8">
+        <h2 class="text-3xl font-bold mb-4 text-blue-900 text-center">Kelola Struktur Organisasi</h2>
+        <p class="text-center text-red-500 mb-8">Edit struktur organisasi BEM Fakultas Ilmu Komputer</p>
+
+        <!-- Ketua dan Wakil Ketua Section -->
+        <div class="flex flex-wrap justify-center gap-6 mb-10">
+            <!-- Ketua -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden w-72">
+                <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover" alt="Ketua BEM">
+                <div class="p-4 text-center">
+                    <h5 class="text-xl font-semibold text-blue-600">Nama Ketua BEM</h5>
+                    <p class="text-gray-600">Ketua BEM</p>
+                    <div class="mt-4">
+                        <a href="organizationedit.html?role=ketua" class="text-blue-600 hover:underline">Edit</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Wakil Ketua -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden w-72">
+                <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover" alt="Wakil Ketua BEM">
+                <div class="p-4 text-center">
+                    <h5 class="text-xl font-semibold text-blue-600">Nama Wakil Ketua BEM</h5>
+                    <p class="text-gray-600">Wakil Ketua BEM</p>
+                    <div class="mt-4">
+                        <a href="organizationedit.html?role=wakil" class="text-blue-600 hover:underline">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sekretaris and Bendahara Section -->
+        <div class="flex flex-wrap justify-center gap-6 mb-10">
+            <!-- Sekretaris 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden w-72">
+                <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover" alt="Sekretaris 1">
+                <div class="p-4 text-center">
+                    <h5 class="text-xl font-semibold text-blue-600">Nama Sekretaris 1</h5>
+                    <p class="text-gray-600">Sekretaris 1</p>
+                    <div class="mt-4">
+                        <a href="organizationedit.html?role=sekretaris1" class="text-blue-600 hover:underline">Edit</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sekretaris 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden w-72">
+                <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover" alt="Sekretaris 2">
+                <div class="p-4 text-center">
+                    <h5 class="text-xl font-semibold text-blue-600">Nama Sekretaris 2</h5>
+                    <p class="text-gray-600">Sekretaris 2</p>
+                    <div class="mt-4">
+                        <a href="organizationedit.html?role=sekretaris2" class="text-blue-600 hover:underline">Edit</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Bendahara 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden w-72">
+                <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover" alt="Bendahara 1">
+                <div class="p-4 text-center">
+                    <h5 class="text-xl font-semibold text-blue-600">Nama Bendahara 1</h5>
+                    <p class="text-gray-600">Bendahara 1</p>
+                    <div class="mt-4">
+                        <a href="organizationedit.html?role=bendahara1" class="text-blue-600 hover:underline">Edit</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Bendahara 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden w-72">
+                <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover" alt="Bendahara 2">
+                <div class="p-4 text-center">
+                    <h5 class="text-xl font-semibold text-blue-600">Nama Bendahara 2</h5>
+                    <p class="text-gray-600">Bendahara 2</p>
+                    <div class="mt-4">
+                        <a href="organizationedit.html?role=bendahara2" class="text-blue-600 hover:underline">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Koordinator Departemen Section -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">Koordinator Departemen dan Staff</h3>
+            <div class="flex justify-center items-center mb-4">
+                <button id="toggleAddForms" class="flex justify-center items-center">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/plus.png" alt="Add Coordinator Icon" class="h-10 w-10">
+                </button>
+            </div>
+
+            <!-- Form Tambah Koordinator -->
+            <div id="addCoordinatorForm" class="hidden mb-8">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">Tambah Koordinator Baru</h3>
+                <form id="create-coordinator-form" class="bg-gray-200 p-4 rounded-lg">
+                    <div class="mb-4">
+                        <label for="coordinatorName" class="block text-sm font-medium text-gray-700">Nama Koordinator</label>
+                        <input type="text" id="coordinatorName" name="coordinatorName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+                    <div class="mb-4">
+                        <label for="departmentName" class="block text-sm font-medium text-gray-700">Nama Departemen</label>
+                        <input type="text" id="departmentName" name="departmentName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+                    <div class="mb-4">
+                        <label for="coordinatorImage" class="block text-sm font-medium text-gray-700">Upload Gambar Koordinator</label>
+                        <input type="file" id="coordinatorImage" name="coordinatorImage" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+                    <div class="flex justify-end">
+                        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-700">Tambah Koordinator</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Form Tambah Staff -->
+            <div id="addStaffForm" class="hidden mb-8">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">Tambah Staff Baru</h3>
+                <form id="create-staff-form" class="bg-gray-200 p-4 rounded-lg">
+                    <div class="mb-4">
+                        <label for="staffName" class="block text-sm font-medium text-gray-700">Nama Staff</label>
+                        <input type="text" id="staffName" name="staffName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+                    <div class="mb-4">
+                        <label for="staffDepartment" class="block text-sm font-medium text-gray-700">Pilih Departemen</label>
+                        <select id="staffDepartment" name="staffDepartment" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                            <!-- Options for existing departments will be added dynamically -->
+                            <option value="departemenA">Departemen A</option>
+                            <option value="departemenB">Departemen B</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="staffImage" class="block text-sm font-medium text-gray-700">Upload Gambar Staff</label>
+                        <input type="file" id="staffImage" name="staffImage" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+                    <div class="flex justify-end">
+                        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-700">Tambah Staff</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Daftar Koordinator -->
+            <div id="coordinator-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Contoh Koordinator dengan Staff -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/150" class="w-full h-48 object-cover" alt="Koordinator Departemen">
+                    <div class="p-4">
+                        <h5 class="text-xl font-semibold text-blue-900">Nama Koordinator 1</h5>
+                        <p class="text-gray-600">Koordinator Departemen A</p>
+                        <div class="flex justify-between mt-4">
+                            <a href="koordinatoredit.html?role=koordinator&dept=departemenA&id=1" class="text-blue-600 hover:underline">Edit</a>
+                            <button class="text-red-600 hover:underline">Hapus</button>
+                        </div>
+                        <!-- Staff under Koordinator -->
+                        <div class="mt-4">
+                            <h6 class="text-lg font-semibold text-blue-700">Staff:</h6>
+                            <ul class="list-disc pl-5 mt-2 text-gray-600">
+                                <li>
+                                    <img src="https://via.placeholder.com/50" class="staff-image" alt="Staff External">
+                                    Muhammad Naufal Arrafi - Staff External
+                                </li>
+                                <li>
+                                    <img src="https://via.placeholder.com/50" class="staff-image" alt="Staff Internal">
+                                    Ryan Harun Barlongo - Staff Internal
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ulangi struktur ini untuk Koordinator dan staff lainnya -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="footer"></div> <!-- Placeholder for footer -->
+    </footer>
+
+    <script src="organizationadmin.js"></script> <!-- Include JS file -->
+        <!-- Optional Bootstrap JS dan dependensinya -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

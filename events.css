@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    padding: 10px 20px; /* Kurangi padding jika terlalu besar */
+    font-size: 1rem; /* Ukuran font yang proporsional */
+}
+
+.event-card {
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-card .card-title {
+    font-size: 1.2rem;
+    color: #007bff; /* Primary color for event titles */
+}
+
+footer {
+    background-color: #333; /* Matching footer background */
+    color: white;
+    padding: 10px 0;
+}

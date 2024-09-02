@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    padding: 10px 20px; /* Kurangi padding jika terlalu besar */
+    font-size: 1rem; /* Ukuran font yang proporsional */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ddd; /* Warna hover lebih terang */
+    text-decoration: underline; /* Garis bawah saat hover */
+}
+
+.jumbotron {
+    border-top: none; /* Menghilangkan garis di atas hero section */
+    background-color: #f8f9fa;
+    padding: 30px;
+}
+
+section {
+    border-top: 2px solid #cccccc;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+
+.info-section {
+    padding: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-section h4 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #0056b3;
+}
+
+.info-section p {
+    color: #ffffff;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.card-title {
+    color: #0056b3;
+    font-size: 1.2rem;
+}
+
+/* Efek Hover untuk Card */
+.card:hover {
+    transform: translateY(-10px); /* Card bergerak ke atas sedikit */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow lebih jelas saat hover */
+    transition: all 0.3s ease; /* Transisi halus */
+}
+
+/* Efek Hover untuk Gambar */
+.card-img-top:hover, 
+.img-fluid:hover {
+    transform: scale(1.05); /* Membesarkan gambar sedikit */
+    transition: transform 0.3s ease; /* Transisi halus */
+}
+
+/* Efek Hover untuk Ikon */
+.icon-box i:hover {
+    color: #ff0000; /* Mengubah warna ikon saat hover */
+    transition: color 0.3s ease; /* Transisi halus */
+}
+
+.agenda-section {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-top: 1px solid #ddd; /* Garis pembatas */
+}
+
+.agenda-section h2 {
+    font-size: 2.5rem;
+    color: #0056b3; /* Warna biru */
+}
+
+.agenda-section .card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.agenda-section .card-title {
+    color: #0056b3;
+    font-size: 1.2rem;
+}
+
+
+.testimonial-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.testimonial-card img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimonial-card strong {
+    color: #0056b3;
+}
+
+.testimonial-card small {
+    color: #6c757d;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 15px 0;
+}
+
+/* Menu default: disembunyikan pada mobile */
+#menu {
+    display: none;
+}
+
+/* Tampilkan menu saat tombol burger diklik */
+.menu-active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Menu terlihat sebagai baris pada desktop */
+@media (min-width: 768px) {
+    #menu {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
