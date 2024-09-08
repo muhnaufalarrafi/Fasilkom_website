@@ -134,7 +134,7 @@ DATABASE_PASSWORD=<your_mysql_password>
 JWT_SECRET=<your_jwt_secret>
 ```
 
-Database
+### Database
 The application uses MySQL as the database. Models are defined using Sequelize.
 
 - Organization: Contains organization details (person name, position, image).
@@ -143,4 +143,35 @@ The application uses MySQL as the database. Models are defined using Sequelize.
 - Project: Stores project data relevant to the organization.
 - Ensure that your MySQL database is set up correctly with proper permissions, and the Sequelize migrations have been run to initialize the schema.
 
-Folder Structure
+### Folder Structure
+```
+backend/
+├── controllers/
+│   ├── authController.js
+│   ├── eventController.js
+│   ├── organizationController.js
+│   └── ...
+├── middlewares/
+│   ├── authMiddleware.js
+│   └── uploadMiddleware.js
+├── models/
+│   ├── Organization.js
+│   ├── Event.js
+│   └── ...
+├── routes/
+│   ├── authRoutes.js
+│   ├── organizationRoutes.js
+│   └── eventRoutes.js
+├── uploads/
+│   └── (Stores uploaded images)
+├── config/
+│   └── config.json (Sequelize DB config)
+├── app.js
+└── server.js
+```
+
+### License
+```
+
+Pastikan Anda memeriksa indentasi dan penggunaan tanda backticks (\`) untuk penulisan blok kode. Ini harus memperbaiki preview di GitHub Anda.
+```
