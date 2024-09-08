@@ -51,75 +51,96 @@ Ensure you have the following installed on your machine:
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/muhnaufalarrafi/Fasilkom_website.git
-   cd Fasilkom_website/backend
-Install the required dependencies:
+    ```bash
+    git clone https://github.com/muhnaufalarrafi/Fasilkom_website.git
+    cd Fasilkom_website/backend
+    ```
 
-bash
-Copy code
-npm install
-Create a .env file in the root of the backend directory and configure the environment variables (See Environment Variables).
+2. Install the required dependencies:
 
-Set up the database:
+    ```bash
+    npm install
+    ```
 
-Ensure MySQL is running.
-Create a database for the project in MySQL.
-Run the Sequelize migrations:
-bash
-Copy code
-npx sequelize-cli db:migrate
-Start the development server:
+3. Create a `.env` file in the root of the backend directory and configure the environment variables (See Environment Variables).
 
-bash
-Copy code
-npm start
-The backend server will run on http://localhost:5000.
+4. Set up the database:
 
-API Endpoints
-Authentication
-POST /api/login: User login and generate a JWT token.
-POST /api/signup: Register a new user.
-Organizations
-GET /api/organization: Retrieve all organizations.
-GET /api/organization/:id: Retrieve a specific organization by ID.
-POST /api/organization: Create a new organization (Admin-only).
-PUT /api/organization/:id: Update an existing organization (Admin-only).
-DELETE /api/organization/:id: Delete an organization (Admin-only).
-Events
-GET /api/events: Retrieve all events.
-GET /api/events/:id: Retrieve a specific event by ID.
-POST /api/events: Create a new event (Admin-only).
-PUT /api/events/:id: Update an existing event (Admin-only).
-DELETE /api/events/:id: Delete an event (Admin-only).
-Discussions
-GET /api/discussions: Retrieve all discussions.
-GET /api/discussions/:id: Retrieve a specific discussion by ID.
-POST /api/discussions: Create a new discussion.
-PUT /api/discussions/:id: Update an existing discussion.
-DELETE /api/discussions/:id: Delete a discussion.
-Projects
-GET /api/projects: Retrieve all projects.
-GET /api/projects/:id: Retrieve a specific project by ID.
-POST /api/projects: Create a new project (Admin-only).
-PUT /api/projects/:id: Update an existing project (Admin-only).
-DELETE /api/projects/:id: Delete a project (Admin-only).
-Environment Variables
-Create a .env file in the backend directory and configure the following variables:
+    Ensure MySQL is running.
+    
+    - Create a database for the project in MySQL.
+    - Run the Sequelize migrations:
+    
+    ```bash
+    npx sequelize-cli db:migrate
+    ```
 
-bash
-Copy code
+5. Start the development server:
+
+    ```bash
+    npm start
+    ```
+
+    The backend server will run on `http://localhost:5000`.
+
+## API Endpoints
+
+### Authentication
+
+- `POST /api/login`: User login and generate a JWT token.
+- `POST /api/signup`: Register a new user.
+
+### Organizations
+
+- `GET /api/organization`: Retrieve all organizations.
+- `GET /api/organization/:id`: Retrieve a specific organization by ID.
+- `POST /api/organization`: Create a new organization (Admin-only).
+- `PUT /api/organization/:id`: Update an existing organization (Admin-only).
+- `DELETE /api/organization/:id`: Delete an organization (Admin-only).
+
+### Events
+
+- `GET /api/events`: Retrieve all events.
+- `GET /api/events/:id`: Retrieve a specific event by ID.
+- `POST /api/events`: Create a new event (Admin-only).
+- `PUT /api/events/:id`: Update an existing event (Admin-only).
+- `DELETE /api/events/:id`: Delete an event (Admin-only).
+
+### Discussions
+
+- `GET /api/discussions`: Retrieve all discussions.
+- `GET /api/discussions/:id`: Retrieve a specific discussion by ID.
+- `POST /api/discussions`: Create a new discussion.
+- `PUT /api/discussions/:id`: Update an existing discussion.
+- `DELETE /api/discussions/:id`: Delete a discussion.
+
+### Projects
+
+- `GET /api/projects`: Retrieve all projects.
+- `GET /api/projects/:id`: Retrieve a specific project by ID.
+- `POST /api/projects`: Create a new project (Admin-only).
+- `PUT /api/projects/:id`: Update an existing project (Admin-only).
+- `DELETE /api/projects/:id`: Delete a project (Admin-only).
+
+## Environment Variables
+
+Create a `.env` file in the backend directory and configure the following variables:
+
+```bash
 PORT=5000
 DATABASE_NAME=<your_database_name>
 DATABASE_USER=<your_mysql_username>
 DATABASE_PASSWORD=<your_mysql_password>
 JWT_SECRET=<your_jwt_secret>
+```
+
 Database
 The application uses MySQL as the database. Models are defined using Sequelize.
 
-Organization: Contains organization details (person name, position, image).
-Event: Stores event data (title, date, description, image).
-Discussion: Stores discussions created by users.
-Project: Stores project data relevant to the organization.
-Ensure that your MySQL database is set up correctly with proper permissions, and the Sequelize migrations have been run to initialize the schema.
+- Organization: Contains organization details (person name, position, image).
+- Event: Stores event data (title, date, description, image).
+- Discussion: Stores discussions created by users.
+- Project: Stores project data relevant to the organization.
+- Ensure that your MySQL database is set up correctly with proper permissions, and the Sequelize migrations have been run to initialize the schema.
 
+Folder Structure
