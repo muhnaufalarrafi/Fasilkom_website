@@ -1,0 +1,105 @@
+2024-09-02T19:55:47.978Z [INFO]: User newuser logged in successfully
+2024-09-02T20:23:41.241Z [INFO]: User newuser logged in successfully
+2024-09-02T20:26:11.943Z [INFO]: User newuser logged in successfully
+2024-09-02T20:26:55.149Z [ERROR]: Signup failed for user ryan: Validation error
+2024-09-02T20:28:36.069Z [ERROR]: Signup failed for user ryan: Validation error
+2024-09-02T20:28:49.177Z [ERROR]: Signup failed for user ryan: Validation error
+2024-09-02T20:29:23.243Z [INFO]: User ryan signed up successfully
+2024-09-02T20:29:32.330Z [INFO]: User newuser logged in successfully
+2024-09-02T20:29:43.303Z [INFO]: Token for user undefined has been blacklisted and logged out
+2024-09-02T20:29:48.336Z [INFO]: User newuser logged in successfully
+2024-09-02T20:30:42.533Z [INFO]: User updateduser updated successfully.
+2024-09-02T20:34:52.607Z [INFO]: Token for user undefined has been blacklisted and logged out
+2024-09-02T20:37:56.811Z [INFO]: User adminuser logged in successfully
+2024-09-02T20:38:22.264Z [INFO]: User updateduser deleted successfully.
+2024-09-04T07:49:04.158Z [INFO]: User adminuser logged in successfully
+2024-09-04T07:56:28.167Z [INFO]: User adminuser logged in successfully
+2024-09-05T12:13:40.900Z [INFO]: User adminuser logged in successfully
+2024-09-05T12:23:54.565Z [INFO]: User adminuser logged in successfully
+2024-09-05T12:28:54.017Z [INFO]: User adminuser logged in successfully
+2024-09-05T12:32:32.699Z [INFO]: User adminuser logged in successfully
+2024-09-05T12:39:15.507Z [INFO]: User adminuser deleted successfully.
+2024-09-05T12:39:19.867Z [WARN]: Login attempt failed: User adminuser not found
+2024-09-05T12:39:21.956Z [WARN]: Login attempt failed: User adminuser not found
+2024-09-05T12:39:23.336Z [WARN]: Login attempt failed: User adminuser not found
+2024-09-05T12:39:35.064Z [INFO]: User adminuser signed up successfully
+2024-09-05T12:39:40.862Z [INFO]: User adminuser logged in successfully
+2024-09-05T14:11:56.134Z [INFO]: User adminuser logged in successfully
+2024-09-05T14:50:58.106Z [INFO]: Token for user undefined has been blacklisted and logged out
+2024-09-05T14:51:01.709Z [INFO]: User adminuser logged in successfully
+2024-09-05T19:58:26.403Z [WARN]: Login attempt failed: User newuser not found
+2024-09-05T19:59:10.108Z [INFO]: User ryan logged in successfully
+2024-09-05T20:00:24.050Z [INFO]: Token for user undefined has been blacklisted and logged out
+2024-09-05T20:00:29.276Z [INFO]: User adminuser logged in successfully
+2024-09-05T20:04:11.046Z [INFO]: Token for user undefined has been blacklisted and logged out
+2024-09-05T20:04:14.645Z [INFO]: User ryan logged in successfully
+2024-09-05T20:08:09.574Z [INFO]: User adminuser logged in successfully
+2024-09-05T20:29:09.664Z [INFO]: User adminuser logged in successfully
+2024-09-06T08:01:39.130Z [INFO]: User adminuser logged in successfully
+2024-09-06T09:17:48.424Z [INFO]: User adminuser logged in successfully
+2024-09-06T10:08:37.830Z [INFO]: User adminuser logged in successfully
+2024-09-06T10:27:52.198Z [INFO]: User adminuser logged in successfully
+2024-09-06T11:29:24.880Z [INFO]: User ryan logged in successfully
+2024-09-07T10:07:05.130Z [INFO]: User ryan logged in successfully
+2024-09-07T10:20:57.104Z [INFO]: User adminuser logged in successfully
+2024-09-07T12:24:30.615Z [INFO]: User ryan logged in successfully
+2024-09-07T18:31:58.225Z [INFO]: User ryan logged in successfully
+2024-09-07T18:36:07.177Z [INFO]: User ryan logged in successfully
+2024-09-07T18:36:17.020Z [INFO]: User ryan logged in successfully
+2024-09-07T18:36:42.464Z [INFO]: User adminuser logged in successfully
+2024-09-07T18:49:45.930Z [INFO]: User arrafi signed up successfully
+2024-09-07T19:22:17.786Z [INFO]: User ryan logged in successfully
+2024-09-07T19:22:35.911Z [INFO]: User arrafi logged in successfully
+2024-09-07T19:22:51.952Z [INFO]: User adminuser logged in successfully
+2024-09-07T20:12:48.237Z [INFO]: User contoh1 signed up successfully
+2024-09-07T20:12:54.426Z [INFO]: User contoh1 logged in successfully
+2024-09-07T20:13:51.452Z [INFO]: User adminuser logged in successfully
+2024-09-07T20:23:21.631Z [INFO]: User contoh1 logged in successfully
+2024-09-07T20:23:28.580Z [INFO]: User ryan logged in successfully
+2024-09-07T20:28:32.365Z [INFO]: User ryan logged in successfully
+2024-09-07T20:29:38.111Z [INFO]: User ryan logged in successfully
+2024-09-07T20:31:32.770Z [INFO]: User contoh1 logged in successfully
+2024-09-07T20:35:02.364Z [INFO]: User ryan logged in successfully
+2024-09-07T20:38:23.716Z [INFO]: User ryan logged in successfully
+2024-09-08T06:10:09.549Z [INFO]: User arrafi logged in successfully
+2024-09-08T06:10:57.038Z [INFO]: User naufal signed up successfully
+2024-09-08T06:15:11.263Z [WARN]: Login attempt failed: User rwgfrwgwr not found
+2024-09-08T06:19:22.827Z [WARN]: Login attempt failed: User ergergregre not found
+2024-09-08T06:19:38.408Z [WARN]: Login attempt failed: Incorrect password for user arrafi
+2024-09-08T06:19:38.894Z [WARN]: Login attempt failed: Incorrect password for user arrafi
+2024-09-08T06:19:39.271Z [WARN]: Login attempt failed: Incorrect password for user arrafi
+2024-09-08T06:19:39.537Z [WARN]: Login attempt failed: Incorrect password for user arrafi
+2024-09-08T06:19:40.309Z [WARN]: Login attempt failed: Incorrect password for user arrafi
+2024-09-08T06:19:43.975Z [WARN]: Login attempt failed: Incorrect password for user arrafi
+2024-09-08T06:19:44.432Z [WARN]: Login attempt failed: Incorrect password for user arrafi
+2024-09-08T06:19:44.537Z [WARN]: Login attempt failed: Incorrect password for user arrafi
+2024-09-08T06:19:44.711Z [WARN]: Login attempt failed: Incorrect password for user arrafi
+2024-09-08T06:19:48.107Z [WARN]: Login attempt failed: Incorrect password for user arrafi
+2024-09-08T06:19:48.342Z [WARN]: Login attempt failed: Incorrect password for user arrafi
+2024-09-08T06:19:48.487Z [WARN]: Login attempt failed: Incorrect password for user arrafi
+2024-09-08T06:19:52.073Z [WARN]: Login attempt failed: User feewfew not found
+2024-09-08T06:19:52.461Z [WARN]: Login attempt failed: User feewfew not found
+2024-09-08T06:20:17.330Z [WARN]: Login attempt failed: Incorrect password for user ryan
+2024-09-08T06:20:17.709Z [WARN]: Login attempt failed: Incorrect password for user ryan
+2024-09-08T06:20:17.792Z [WARN]: Login attempt failed: Incorrect password for user ryan
+2024-09-08T06:20:27.036Z [WARN]: Login attempt failed: Incorrect password for user ryan
+2024-09-08T06:20:27.593Z [WARN]: Login attempt failed: Incorrect password for user ryan
+2024-09-08T06:20:27.891Z [WARN]: Login attempt failed: Incorrect password for user ryan
+2024-09-08T06:20:34.093Z [WARN]: Login attempt failed: User ryann not found
+2024-09-08T06:20:34.425Z [WARN]: Login attempt failed: User ryann not found
+2024-09-08T06:20:42.607Z [WARN]: Login attempt failed: User 453543534 not found
+2024-09-08T06:20:42.861Z [WARN]: Login attempt failed: User 453543534 not found
+2024-09-08T06:32:30.284Z [WARN]: Login attempt failed: User dsadsadsa not found
+2024-09-08T06:32:30.464Z [WARN]: Login attempt failed: User dsadsadsa not found
+2024-09-08T06:32:30.597Z [WARN]: Login attempt failed: User dsadsadsa not found
+2024-09-08T06:34:45.581Z [INFO]: User naufal logged in successfully
+2024-09-08T06:45:57.037Z [INFO]: User naufal logged in successfully
+2024-09-08T06:46:05.306Z [INFO]: User arrafi logged in successfully
+2024-09-08T08:22:54.002Z [INFO]: User arrafi logged in successfully
+2024-09-08T08:23:27.358Z [INFO]: User contoh2 signed up successfully
+2024-09-08T08:25:42.196Z [INFO]: User contoh3 signed up successfully
+2024-09-08T08:25:45.349Z [INFO]: User contoh3 logged in successfully
+2024-09-08T08:30:22.311Z [INFO]: User contoh3 logged in successfully
+2024-09-08T08:30:31.029Z [INFO]: User naufal logged in successfully
+2024-09-08T12:55:33.765Z [INFO]: User adminuser logged in successfully
+2024-09-08T12:58:05.030Z [INFO]: User ryan logged in successfully

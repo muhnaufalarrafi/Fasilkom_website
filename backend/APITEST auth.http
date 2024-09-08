@@ -6,7 +6,8 @@ Content-Type: application/json
     "name": "naufal",
     "email": "naufal@gmail.com",
     "password": "naufal",
-    "confPassword": "naufal"
+    "confPassword": "naufal",
+    "role": "user"
 }
 
 ### Login
@@ -14,13 +15,13 @@ POST http://localhost:5000/login
 Content-Type: application/json
 
 {
-    "email": "johndoe@example.com",
-    "password": "password123"
+    "email": "naufal@gmail.com",
+    "password": "naufal"
 }
 
 ### Get Current User
 GET http://localhost:5000/me
-Authorization: Bearer <JWT_TOKEN>
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjRmYmJmNi1lMjE4LTQyZDQtODQzMi1kYWVlMjUwNjQzNWMiLCJuYW1lIjoibmF1ZmFsIiwiZW1haWwiOiJuYXVmYWxAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MjUyOTg0MDQsImV4cCI6MTcyNTMwMjAwNH0.xSgsJHbRPkedbS25KSMC_yfvpDTE07IWtizafA0YZPw
 
 ### Logout
 DELETE http://localhost:5000/logout

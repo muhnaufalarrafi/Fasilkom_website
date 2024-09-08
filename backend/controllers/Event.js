@@ -18,38 +18,41 @@ export const getEvents = async (req, res) => {
 
 export const getEventById = async (req, res) => {
     try {
-        const response = await Event.findOne({
-            where: { uuid: req.params.id },
+        const eventUuid = req.params.id; // Pastikan ini diambil dengan benar
+        const event = await Event.findOne({
+            where: { uuid: eventUuid },
             include: [{
                 model: Users,
                 attributes: ['name', 'email']
             }]
         });
-        if (!response) return res.status(404).json({ msg: "Event not found" });
-        res.status(200).json(response);
+        if (!event) return res.status(404).json({ msg: "Event not found" });
+        res.status(200).json(event);
     } catch (error) {
         res.status(500).json({ msg: error.message });
     }
 };
 
 export const createEvent = async (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
-    }
-
-    const { title, description, date, time, location, image } = req.body;
     try {
-        await Event.create({
-            title: title,
-            description: description,
-            date: date,
-            time: time,
-            location: location,
-            image: image,
-            userId: req.userId
+        const user = await Users.findOne({
+            where: {
+                uuid: req.body.userUuid  // Mengambil UUID user dari request body
+            }
         });
-        res.status(201).json({ msg: "Event Created Successfully" });
+
+        if (!user) return res.status(404).json({ msg: "User tidak ditemukan" });
+
+        const event = await Event.create({
+            title: req.body.title,
+            description: req.body.description,
+            date: req.body.date,
+            time: req.body.time,
+            location: req.body.location,
+            image: req.body.image,
+            userId: user.id  // Menggunakan ID user yang valid
+        });
+        res.status(201).json(event);
     } catch (error) {
         res.status(500).json({ msg: error.message });
     }
