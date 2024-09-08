@@ -1,6 +1,7 @@
 # Fasilkom Website Backend
 
 This repository contains the backend code for the **Fasilkom Website**, which serves as the core API and data management system for managing events, discussions, organizations, and user authentication for the Fasilkom website. Built with Node.js and Express, this backend interacts with a MySQL/Sequelize database and provides secure access to the data via RESTful APIs.
+**Create By : Muhammad Naufal Arrafi**
 
 ## Table of Contents
 
