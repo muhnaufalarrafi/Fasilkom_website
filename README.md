@@ -127,7 +127,7 @@ Ensure you have the following installed on your machine:
 Create a `.env` file in the backend directory and configure the following variables:
 
 ```bash
-PORT=5000
+PORT=YOUT_PORT
 DATABASE_NAME=<your_database_name>
 DATABASE_USER=<your_mysql_username>
 DATABASE_PASSWORD=<your_mysql_password>
