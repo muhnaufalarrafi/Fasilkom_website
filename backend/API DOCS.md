@@ -6,7 +6,7 @@ These routes handle user authentication (sign-up, login) and JWT-based authoriza
 | HTTP Method | Endpoint             | Description                 | Headers                     | Body                                                         |
 |-------------|----------------------|-----------------------------|-----------------------------|--------------------------------------------------------------|
 | `POST`      | `/login`             | Login and get JWT token      | None                        | `{ "username": "yourUsername", "password": "yourPassword" }`  |
-| `POST`      | `/signup`            | Register a new user          | None                        | `{ "username": "yourUsername", "email": "yourEmail", "password": "yourPassword" }` |
+| `POST`      | `/signup`            | Register a new user          | None                        | `{ "username": "yourUsername", "email": "yourEmail", "password": "yourPassword", "role":"your role"}` |
 
 ### Organization Routes
 
