@@ -165,7 +165,7 @@ backend/
 ├── uploads/
 │   └── (Stores uploaded images)
 ├── config/
-│   └── config.json (Sequelize DB config)
+│   └── config.js (Sequelize DB config)
 ├── app.js
 └── server.js
 ```
